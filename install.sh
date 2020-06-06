@@ -16,25 +16,7 @@ sudo systemctl enable docker && \
 sudo apt install -y docker-compose && \
 
 # Install PowerShell
-# Download the Microsoft repository GPG keys
-sudo wget -q https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb && \
-
-# Register the Microsoft repository GPG keys
-sudo dpkg -i packages-microsoft-prod.deb && \
-
-# Update the list of products
-sudo apt install software-properties-common -y && \
-sudo apt-get update && \
-
-# Enable the "universe" repositories
-sudo add-apt-repository universe && \
-
-# Install Gluster
-echo Installing Gluster && \
-sudo apt-get install -y software-properties-common && \
-sudo add-apt-repository ppa:gluster/glusterfs-7 && \
-sudo apt-get -y update && \
-sudo apt-get install -y glusterfs-server && \
+sudo snap install powershell --classic
 
 
 # Add Current User to Docker Group
