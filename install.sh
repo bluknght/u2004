@@ -29,9 +29,6 @@ sudo apt-get update && \
 # Enable the "universe" repositories
 sudo add-apt-repository universe && \
 
-# Install PowerShell
-sudo apt-get install -y powershell && \
-
 # Install Gluster
 echo Installing Gluster && \
 sudo apt-get install -y software-properties-common && \
@@ -39,18 +36,9 @@ sudo add-apt-repository ppa:gluster/glusterfs-7 && \
 sudo apt-get -y update && \
 sudo apt-get install -y glusterfs-server && \
 
-# Install Python
-#sudo apt install python -y && \
 
 # Add Current User to Docker Group
-sudo usermod -aG docker $SUDO_USER && \
-
-# Add Sync
-sudo mkdir ~/sync && \
-sudo mv docker-compose.yml ~/sync/ && \
-
-$ Install Digital Ocean CLI
-sudo snap install doctl && \
+sudo usermod -aG docker $USER && \
 
 # Shutdown
 sudo shutdown -r now
