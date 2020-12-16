@@ -23,7 +23,7 @@ sudo snap install powershell --classic
 sudo usermod -aG docker $USER && \
 
 # Install Wireguard
-sudo apt install wireguard -y
+sudo apt install wireguard -y && \
 
 # Shutdown
 sudo shutdown -r now
