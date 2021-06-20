@@ -20,10 +20,11 @@ sudo snap install powershell --classic
 
 
 # Add Current User to Docker Group
-sudo usermod -aG docker $USER && \
+#sudo usermod -aG docker $USER && \
+sudo usermod -aG docker $USER
 
 # Install Wireguard
-sudo apt install wireguard -y && \
+#sudo apt install wireguard -y && \
 
 # Shutdown
-sudo shutdown -r now
+#sudo shutdown -r now
